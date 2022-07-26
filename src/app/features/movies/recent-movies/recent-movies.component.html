@@ -1,4 +1,4 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false" >
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" >
   <div class="carousel-indicators" >
     <button *ngFor="let movie of recentMovies; let pos = index" type="button"
         data-bs-target="#carouselExampleCaptions"
@@ -10,7 +10,7 @@
   </div>
   <div class="carousel-inner">
     <div *ngFor="let movie of recentMovies; let pos=index"
-      [ngClass]="pos == 0 ? 'carousel-item active': 'carousel-item'">
+      [ngClass]="pos == 0 ? 'carousel-item active': 'carousel-item'" data-bs-interval="5000">
       <img [src]="movie.url" class="d-block w-100" style="height: 350px" [alt]="movie.name">
       <div class="carousel-caption d-none d-md-block">
         <h5>{{ movie.name }}</h5>
