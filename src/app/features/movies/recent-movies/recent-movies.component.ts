@@ -1,3 +1,4 @@
+import { MovieService } from '../services/movie.service';
 import { Component, OnInit } from '@angular/core';
 import { RecentMovie } from '../models/recentMovie';
 
@@ -16,9 +17,15 @@ export class RecentMoviesComponent implements OnInit {
     { id: 5, description: "Esto es una descripcion para Uncharted", name:"Uncharted", url:"https://www.unchartedmovie.com/images/share.jpg"},
   ]
 
-  constructor() { }
+  constructor(private movieService: MovieService) {
+
+  }
 
   ngOnInit(): void {
+    this.movieService.getRecentMovies()
+      .subscribe(data=> {
+        console.log(data);
+      });
   }
 
 }
