@@ -10,7 +10,7 @@ export class MovieService {
   constructor(private httpClient: HttpClient) { }
 
   getRecentMovies(): Observable<any> {
-    let response = this.httpClient.get('https://localhost:44357/api/Pelicula');
+    let response = this.httpClient.get('https://api.themoviedb.org/3/movie/now_playing?api_key=a6db559033af943be136a2110dbd4b5f&language=es-ES');
     return response;
   }
 }
