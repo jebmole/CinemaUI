@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RecentMoviesComponent } from './features/movies/recent-movies/recent-movies.component';
 import { ModernCarouselComponent } from './features/movies/modern-carousel/modern-carousel.component';
+import { MovieDetailComponent } from './features/movies/movie-detail/movie-detail.component';
+import { HomeComponent } from './features/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RecentMoviesComponent,
-    ModernCarouselComponent
+    ModernCarouselComponent,
+    MovieDetailComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
