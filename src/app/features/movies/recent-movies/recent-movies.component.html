@@ -11,7 +11,7 @@
   <div class="carousel-inner">
     <div *ngFor="let movie of recentMovies; let pos=index"
       [ngClass]="pos == 0 ? 'carousel-item active': 'carousel-item'" data-bs-interval="5000">
-      <img [src]="movie.url" class="d-block w-100" style="height: 350px" [alt]="movie.name">
+      <img [src]="movie.url" class="d-block w-100" style="height: 450px" [alt]="movie.name">
       <div class="carousel-caption d-none d-md-block">
         <h5>{{ movie.name }}</h5>
         <p>{{ movie.description }}</p>
