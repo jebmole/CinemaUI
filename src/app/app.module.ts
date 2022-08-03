@@ -7,6 +7,8 @@ import { RecentMoviesComponent } from './features/movies/recent-movies/recent-mo
 import { ModernCarouselComponent } from './features/movies/modern-carousel/modern-carousel.component';
 import { MovieDetailComponent } from './features/movies/movie-detail/movie-detail.component';
 import { HomeComponent } from './features/home/home.component';
+import { SalaComponent } from './features/sala/sala.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,14 @@ import { HomeComponent } from './features/home/home.component';
     RecentMoviesComponent,
     ModernCarouselComponent,
     MovieDetailComponent,
-    HomeComponent
+    HomeComponent,
+    SalaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

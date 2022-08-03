@@ -1,3 +1,4 @@
+import { SalaComponent } from './features/sala/sala.component';
 import { HomeComponent } from './features/home/home.component';
 import { MovieDetailComponent } from './features/movies/movie-detail/movie-detail.component';
 import { NgModule } from '@angular/core';
@@ -6,12 +7,16 @@ import { RecentMoviesComponent } from './features/movies/recent-movies/recent-mo
 
 const routes: Routes = [
   {
-    path:'',
+    path:'home',
     component: HomeComponent
   },
   {
     path:'detail/:id',
     component: MovieDetailComponent
+  },
+  {
+    path:"salas",
+    component: SalaComponent
   },
   {
     path:'**',
